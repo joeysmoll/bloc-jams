@@ -34,7 +34,7 @@ body {
 @media (min-width:640px){
     html {font-size:112%}
     
-    column{
+    .column{
         float: left;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -49,7 +49,7 @@ body {
 }
 
 /*large screens (1024px)*/
-@media (min-width:1024px){
+@media (min-width: 1024px){
     html{font-size: 120%}
 }
 
