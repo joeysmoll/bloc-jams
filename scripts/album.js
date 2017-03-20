@@ -85,7 +85,7 @@ var setCurrentAlbum = function(album) {
 
 
 var albumArray = [ albumMarconi, albumJon, albumPicasso];
-window.onclick = function(){
+document.getElementsByClassName('album-cover-art')[0].onclick = function(){
             var defaultAlbum = albumArray[0];
             setCurrentAlbum(defaultAlbum);
             albumArray.push(albumArray.shift());
