@@ -29,6 +29,21 @@ var albumMarconi = {
      ]
  };
 
+var albumJon = {
+     title: 'Snap Yo Fingers',
+     artist: 'Lil Jon',
+     label: 'Dirty South',
+     year: '2002',
+     albumArtUrl: 'assets/images/album_covers/14.png',
+     songs: [
+         { title: 'Clap Yo Hands', duration: '1:00' },
+         { title: 'Stomp Yo Feet', duration: '5:00' },
+         { title: 'Shake Yo Hair', duration: '3:00'},
+         { title: 'Close Yo Eyes', duration: '4:00' },
+         { title: 'HWHAT!', duration: '2:00'}
+     ]
+ };
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -67,3 +82,20 @@ var setCurrentAlbum = function(album) {
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
  };
+
+
+var albumArray = [ albumMarconi, albumJon, albumPicasso];
+window.onclick = function(){
+            var defaultAlbum = albumArray[0];
+            setCurrentAlbum(defaultAlbum);
+            albumArray.push(albumArray.shift());
+                  
+};
+
+
+
+
+
+
+
+
