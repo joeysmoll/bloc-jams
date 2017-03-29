@@ -181,5 +181,3 @@ for (var i = 0; i < songRows.length; i++) {
         clickHandler(event.target);
     });
 }
-
-};
