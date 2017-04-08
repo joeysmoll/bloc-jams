@@ -35,7 +35,6 @@ var createSongRow = function(songNumber, songName, songLength) {
             setSong();
 
         }
-        updatePlayerBarSong();
     };
 
     var onHover = function(event) {
@@ -101,8 +100,8 @@ var nextSong = function() {
 
     updatePlayerBarSong();
 
-    var $nextSongNumberCell = getSongNumber(currentlyPlayingSongNumber);
-    var $lastSongNumberCell = getSongNumber(lastSongNumber);
+    var $nextSongNumberCell = getSongNumberCell(currentlyPlayingSongNumber);
+    var $lastSongNumberCell = getSongNumberCell(lastSongNumber);
 
     $nextSongNumberCell.html(pauseButtonTemplate);
     $lastSongNumberCell.html(lastSongNumber);
