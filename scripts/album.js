@@ -26,9 +26,8 @@ var createSongRow = function(songNumber, songName, songLength) {
             $('.main-controls .play-pause').html(playerBarPlayButton);
             currentlyPlayingSongNumber = null;
             currentSongFromAlbum = null;
-
         }
-        updatePlayerBarSong();
+
     };
 
     var onHover = function(event) {
@@ -109,10 +108,8 @@ var previousSong = function() {
         currentSongIndex = currentAlbum.songs.length - 1;
     }
     var lastSongNumber = currentlyPlayingSongNumber;
-
     currentlyPlayingSongNumber = currentSongIndex + 1;
     currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
-
     updatePlayerBarSong();
 
     $('.main-controls .play-pause').html(playerBarPauseButton);
@@ -126,8 +123,8 @@ var previousSong = function() {
 
 var updatePlayerBarSong = function() {
     $('.currently-playing .song-name').text(currentSongFromAlbum.title);
-    $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.artist);
     $('.currently-playing .artist-name').text(currentAlbum.artist);
+    $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.artist);
 
     $('.main-controls .play-pause').html(playerBarPauseButton);
 };
