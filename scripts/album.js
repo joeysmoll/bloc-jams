@@ -5,7 +5,7 @@ var setSong = function(songNumber) {
 
 var getSongNumberCell = function(number) {
     return $('.song-item-number[data-song-number="' + number + '"]');
-}
+};
 
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
